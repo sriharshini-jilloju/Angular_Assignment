@@ -1,0 +1,14 @@
+<h2>API Users</h2>
+
+@if (users.length > 0) {
+  <ul>
+    @for (user of users; track user.id) {
+      <li class="user-card">
+        <strong>{{ user.name }}</strong> ({{ user.email }})<br />
+        {{ user.address.city }}, {{ user.phone }}
+      </li>
+    }
+  </ul>
+} @else {
+  <p class="loading">Loading users...</p>
+}

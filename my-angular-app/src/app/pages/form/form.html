@@ -1,0 +1,70 @@
+<h2> Survey Form</h2>
+
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+
+  <label>Name:</label><br />
+  <input formControlName="name" /><br />
+  @if (feedbackForm.get('name')?.touched && feedbackForm.get('name')?.invalid) {
+    <div class="error">Name is required.</div>
+  }
+
+  <label>Email:</label><br />
+  <input formControlName="email" /><br />
+  @if (feedbackForm.get('email')?.touched && feedbackForm.get('email')?.invalid) {
+    <div class="error">Valid email is required.</div>
+  }
+
+  <label>Age (optional):</label><br />
+  <input formControlName="age" type="number" /><br />
+
+  <label>Gender:</label><br />
+  @for (gender of ['Male', 'Female', 'Other']; track gender) {
+    <label>
+      <input type="radio" formControlName="gender" [value]="gender" /> {{ gender }}
+    </label>
+  }
+  <br />
+  @if (feedbackForm.get('gender')?.touched && feedbackForm.get('gender')?.invalid) {
+    <div class="error">Please select your gender.</div>
+  }
+
+  <label>Topics of Interest:</label><br />
+  @for (topic of topics; track topic) {
+    <label>
+      <input
+        type="checkbox"
+        [value]="topic"
+        (change)="onCheckboxChange($event)"
+        [checked]="feedbackForm.get('topics')?.value.includes(topic)"
+      />
+      {{ topic }}
+    </label>
+  }
+
+  <label>Rating (1 - Poor to 5 - Excellent):</label><br />
+  <select formControlName="rating">
+    <option value="">--Select Rating--</option>
+    @for (r of [1, 2, 3, 4, 5];track r) {
+      <option [value]="r">{{ r }}</option>
+    }
+  </select>
+  @if (feedbackForm.get('rating')?.touched && feedbackForm.get('rating')?.invalid) {
+    <div class="error">Rating is required.</div>
+  }
+
+  <label>Message:</label><br />
+  <textarea formControlName="message"></textarea><br />
+  @if (feedbackForm.get('message')?.touched && feedbackForm.get('message')?.invalid) {
+    <div class="error">Message is required.</div>
+  }
+
+  <label>
+    <input type="checkbox" formControlName="consent" />
+    I agree to the terms and conditions.
+  </label><br />
+  @if (feedbackForm.get('consent')?.touched && feedbackForm.get('consent')?.invalid) {
+    <div class="error">You must accept the terms.</div>
+  }
+
+  <button type="submit" [disabled]="feedbackForm.invalid">Submit</button>
+</form>

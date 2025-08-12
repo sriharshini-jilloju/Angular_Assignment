@@ -1,0 +1,50 @@
+<div class="container">
+  <header class="header">
+    <h1>Welcome to My Angular App</h1>
+    <h2>Sri Harshini Jilloju - N01649103</h2>
+    <div class="profile-image">
+      <img src="profile-image.jpg" alt="Sri Harshini Jilloju Profile Picture" class="user-image" />
+    </div>
+  </header>
+
+  <main class="main-content">
+    <p class="welcome-text">This is the Home Page.</p>
+
+    <h3>Submitted Survey Responses</h3>
+
+    @if (feedbackList.length === 0) {
+      <p>No submissions yet.</p>
+    } @else {
+      <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Topics</th>
+            <th>Rating</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (feedback of feedbackList; track feedback) {
+            <tr>
+              <td>{{ feedback.name }}</td>
+              <td>{{ feedback.email }}</td>
+              <td>{{ feedback.age || 'N/A' }}</td>
+              <td>{{ feedback.gender }}</td>
+              <td>{{ feedback.topics.join(', ') }}</td>
+              <td>{{ feedback.rating }}</td>
+              <td>{{ feedback.message }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </main>
+</div>
+
+<footer class="footer">
+  <p>&copy; Copyright Sri Harshini Jilloju</p>
+</footer>

@@ -1,0 +1,101 @@
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9fbfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+h2 {
+  text-align: center;
+  color: #007acc;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 0.3rem 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.error {
+  color: #d93025;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.radio-group, .checkbox-group {
+  margin-bottom: 1rem;
+}
+
+label > input[type="radio"],
+label > input[type="checkbox"] {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 1.5rem;
+  background-color: #007acc;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* For radio and checkbox labels in a row */
+label > input[type="radio"],
+label > input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Optional: align radio buttons and checkboxes horizontally */
+@media(min-width: 400px) {
+  .radio-group label,
+  .checkbox-group label {
+    display: inline-block;
+    margin-right: 1.2rem;
+  }
+}
