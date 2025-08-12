@@ -52,8 +52,27 @@ npm start
 
 # API Used
 - Users: https://jsonplaceholder.typicode.com/users
+```
 
+## Screenshots
 
+### Screenshot 1
+![Screenshot 1](Screenshots/Screenshot%202025-08-11%20at%202.17.08%20PM.png)
+
+### Screenshot 2
+![Screenshot 2](Screenshots/Screenshot%202025-08-11%20at%202.17.14%20PM.png)
+
+### Screenshot 3
+![Screenshot 3](Screenshots/Screenshot%202025-08-11%20at%202.17.44%20PM.png)
+
+### Screenshot 4
+![Screenshot 4](Screenshots/Screenshot%202025-08-11%20at%202.17.51%20PM.png)
+
+### Screenshot 5
+![Screenshot 5](Screenshots/Screenshot%202025-08-11%20at%202.18.01%20PM.png)
+
+### Screenshot 6
+![Screenshot 6](Screenshots/Screenshot%202025-08-11%20at%202.18.31%20PM.png)
 
 
 
