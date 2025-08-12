@@ -53,12 +53,8 @@ npm start
 # API Used
 - Users: https://jsonplaceholder.typicode.com/users
 
-## Screenshots
 
-<img width="1710" height="1107" alt="Screenshot 2025-08-11 at 2 17 08 PM" src="https://github.com/user-attachments/assets/60fe8ff1-2ae4-4abd-995f-5e72f972832f" />
-<img width="1710" height="1107" alt="Screenshot 2025-08-11 at 2 17 14 PM" src="https://github.com/user-attachments/assets/06e59bca-c01e-458e-9cfd-ab8bbea61676" />
-<img width="1710" height="1107" alt="Screenshot 2025-08-11 at 2 17 44 PM" src="https://github.com/user-attachments/assets/ec2fd67b-5a55-4662-8081-a96ace2b4104" />
-<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/1d9f3cef-81ec-41c1-b64b-e9c4b93312b4" />
+
 
 
 
